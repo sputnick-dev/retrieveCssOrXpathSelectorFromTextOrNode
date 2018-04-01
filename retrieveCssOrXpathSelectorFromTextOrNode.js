@@ -91,7 +91,7 @@ retrieveCssOrXpathSelectorFromTextOrNode = function(arg, type) {
             return;
         }
     } else {
-        console.error("ERROR expected node or string argumument");
+        console.error("ERROR expected node or string argument");
         return;
     }
 
@@ -109,7 +109,6 @@ retrieveCssOrXpathSelectorFromTextOrNode = function(arg, type) {
     }
 
     return output;
-    //console.log(output);
 
 };
 
