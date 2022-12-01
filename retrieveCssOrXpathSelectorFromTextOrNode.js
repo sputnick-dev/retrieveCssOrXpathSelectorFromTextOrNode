@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         retrieveCssOrXpathSelectorFromTextOrNode
 // @namespace    gilles<dot>quenot<at>sputnick<dot>fr
-// @version      0.2
+// @version      0.3
 // @description  retrieve CSS or Xpath Selector from text or node for chrome dev tools
 // @author       Gilles Quenot
 // @include      https://*
