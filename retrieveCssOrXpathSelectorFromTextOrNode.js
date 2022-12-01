@@ -16,16 +16,16 @@ var xpathNamespaceResolver = {
     mathml: 'http://www.w3.org/1998/Math/MathML'
 };
 
-getElementByXPath = function getElementByXPath(expression) {
+var getElementByXPath = function getElementByXPath(expression) {
     var a = document.evaluate(expression, document.body, xpathNamespaceResolver, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null);
     if (a.snapshotLength > 0) {
         return a.snapshotItem(0);
     }
 };
 
-retrieveCssOrXpathSelectorFromTextOrNode = function(arg, type) {
+var retrieveCssOrXpathSelectorFromTextOrNode = function(arg, type) {
     var root = [], node;
-    nodeType = type.toLowerCase();
+    var nodeType = type.toLowerCase();
     function retrieveNodeNameAndAttributes(node) {
         var output = '';
         try {
@@ -113,7 +113,7 @@ retrieveCssOrXpathSelectorFromTextOrNode = function(arg, type) {
 };
 
 
-x = function(arg) {
+var x = function(arg) {
     console.log("CSS\n" + retrieveCssOrXpathSelectorFromTextOrNode(arg, 'css'));
     console.log("XPath\n" + retrieveCssOrXpathSelectorFromTextOrNode(arg, 'xpath'));
 };
