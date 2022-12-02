@@ -18,3 +18,9 @@ By example, open ChromeDevTools, select a node in the 'elements' tab, then in co
 
     XPath
     //body[@class='logged-in env-production intent-mouse']/div[@class='position-relative js-header-wrapper ']
+    
+## Or using specific css or Xpath expression:
+
+    // select a node in tools/elements
+    retrieveCssOrXpathSelectorFromTextOrNode($0, 'xpath')
+    //body[@class='logged-in env-production intent-mouse']/div[@class='position-relative js-header-wrapper ']
