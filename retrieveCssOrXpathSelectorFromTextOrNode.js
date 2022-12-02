@@ -23,7 +23,7 @@ var getElementByXPath = function getElementByXPath(expression) {
     }
 };
 
-var retrieveCssOrXpathSelectorFromTextOrNode = function(arg, type) {
+window.retrieveCssOrXpathSelectorFromTextOrNode = function(arg, type) {
     var root = [], node;
     var nodeType = type.toLowerCase();
     function retrieveNodeNameAndAttributes(node) {
@@ -91,7 +91,7 @@ var retrieveCssOrXpathSelectorFromTextOrNode = function(arg, type) {
             return;
         }
     } else {
-        console.error("ERROR expected node or string argument");
+        console.error("ERROR expected node or string argumument");
         return;
     }
 
@@ -109,11 +109,12 @@ var retrieveCssOrXpathSelectorFromTextOrNode = function(arg, type) {
     }
 
     return output;
+    //console.log(output);
 
 };
 
-
-var x = function(arg) {
-    console.log("CSS\n" + retrieveCssOrXpathSelectorFromTextOrNode(arg, 'css'));
-    console.log("XPath\n" + retrieveCssOrXpathSelectorFromTextOrNode(arg, 'xpath'));
+window.x = function(arg) {
+    console.log("CSS\n" + window.retrieveCssOrXpathSelectorFromTextOrNode(arg, 'css'));
+    console.log("XPath\n" + window.retrieveCssOrXpathSelectorFromTextOrNode(arg, 'xpath'));
+    
 };
