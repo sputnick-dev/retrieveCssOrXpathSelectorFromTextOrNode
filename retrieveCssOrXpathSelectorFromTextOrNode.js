@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         retrieveCssOrXpathSelectorFromTextOrNode
 // @namespace    gilles<dot>quenot<at>sputnick<dot>fr
-// @version      0.3
+// @version      0.4
 // @description  retrieve CSS or Xpath Selector from text or node for chrome dev tools
 // @author       Gilles Quenot
 // @include      https://*
@@ -39,7 +39,7 @@ window.retrieveCssOrXpathSelectorFromTextOrNode = function(arg, type) {
             for (var i = 0; i < attrs.length; i++) {
                 if (nodeType === 'xpath') {
                     if (attrs[i].value) {
-                        output += '[@' + attrs[i].name + "='" + attrs[i].value + "']";
+                        output += '[@' + attrs[i].name + '="' + attrs[i].value + '"]';
                     }
                     else {
                         output += '[@' + attrs[i].name + ']';
@@ -49,7 +49,7 @@ window.retrieveCssOrXpathSelectorFromTextOrNode = function(arg, type) {
                     if (attrs[i].value) {
                         if (attrs[i].name === 'id') {
                             if (/:/.test(attrs[i].value)) {
-                                output += "[id='" + attrs[i].value + "']"; // new Ex: [id="foo:bar"]
+                                output += '[id="' + attrs[i].value + '"]'; // new Ex: [id="foo:bar"]
                             }
                             else {
                                 output += "#" + attrs[i].value;
@@ -58,7 +58,7 @@ window.retrieveCssOrXpathSelectorFromTextOrNode = function(arg, type) {
                             var classes = attrs[i].value.split(/\s+\b/).join('.');
                             output += '.' + classes;
                         } else {
-                            output += "[" + attrs[i].name + "='" + attrs[i].value + "']";
+                            output += "[" + attrs[i].name + '="' + attrs[i].value + '"]';
                         }
                     }
                     else {
@@ -70,7 +70,7 @@ window.retrieveCssOrXpathSelectorFromTextOrNode = function(arg, type) {
 
         var txt = '';
         if (nodeName === 'a' && nodeType === 'xpath') {
-            txt = "[text()='" + node.innerText + "']";
+            txt = '[text()="' + node.innerText + '"]';
         }
 
         root.push({ 'name': nodeName, 'attrs': output, txt });
