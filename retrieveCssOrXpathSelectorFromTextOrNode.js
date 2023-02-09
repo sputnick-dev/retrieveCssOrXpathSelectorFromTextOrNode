@@ -2,7 +2,7 @@
 // @name         retrieveCssOrXpathSelectorFromTextOrNode
 // @namespace    gilles<dot>quenot<at>sputnick<dot>fr
 // @version      0.4
-// @description  retrieve CSS or Xpath Selector from text or node for chrome dev tools
+// @description  retrieve CSS or Xpath Selector from text or node for chrome dev tools/Firefox dev tools
 // @author       Gilles Quenot
 // @include      https://*
 // @include      http://*
