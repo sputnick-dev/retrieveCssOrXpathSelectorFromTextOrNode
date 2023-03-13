@@ -75,7 +75,7 @@ window.retrieveCssOrXpathSelectorFromTextOrNode = function(arg, type) {
 
         root.push({ 'name': nodeName, 'attrs': output, txt });
 
-        if (nodeName === 'html') return;
+        if (nodeName === 'body' || nodeName === 'html') return;
         else retrieveNodeNameAndAttributes(node.parentNode); // recursive function
     }
 
