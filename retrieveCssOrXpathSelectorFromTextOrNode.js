@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         retrieveCssOrXpathSelectorFromTextOrNode
 // @namespace    gilles<dot>quenot<at>sputnick<dot>fr
-// @version      0.4
+// @version      0.5
 // @description  retrieve CSS or Xpath Selector from text or node for chrome dev tools/Firefox dev tools
 // @author       Gilles Quenot
 // @include      https://*
@@ -75,7 +75,7 @@ window.retrieveCssOrXpathSelectorFromTextOrNode = function(arg, type) {
 
         root.push({ 'name': nodeName, 'attrs': output, txt });
 
-        if (nodeName === 'body') return;
+        if (nodeName === 'html') return;
         else retrieveNodeNameAndAttributes(node.parentNode); // recursive function
     }
 
