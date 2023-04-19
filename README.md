@@ -1,4 +1,4 @@
-This [userscript](https://www.tampermonkey.net/) is intented to retrieve the full CSS/Xpath path of a selected node or a provided text as argument.
+This [userscript](https://www.tampermonkey.net/) is intented to retrieve the full CSS/Xpath path of a selected node or a provided text as argument in your browser Dev Tools.
 
 ## Usage : 
 ### By text :
